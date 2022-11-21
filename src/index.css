@@ -4,4 +4,30 @@
 
 body {
   margin: 0;
+  background-color: #fdfdfd;
+}
+
+@font-face {
+  font-family: 'Acumin';
+  src: url('./content/fonts/FontsFree-Net-Acumin-Pro-Book.ttf');
+}
+
+@font-face {
+  font-family: 'Acumin-Bold';
+  src: url('./content/fonts/FontsFree-Net-Acumin-Pro-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'Acumin-Medium';
+  src: url('./content/fonts/FontsFree-Net-Acumin-Pro-Medium-1.ttf');
+}
+
+@font-face {
+  font-family: 'Acumin-Light';
+  src: url('./content/fonts/FontsFree-Net-Acumin-Pro-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'GTSuperText-Black';
+  src: url('./content/fonts/GT-Super-Text-Black.woff2');
 }
