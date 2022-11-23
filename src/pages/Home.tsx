@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const workColumn = (leftTitle: string, rightTitle: string, unevenColumn: boolean): JSX.Element => {
@@ -69,7 +70,7 @@ const Home: React.FC = () => {
         We deliver full service, end-to-end advisory & engineering services for tomorrow - always with the human at heart. Technology by humans, for humans.
       </h4>
       <h4 className="mt-6 text-[#313131] text-2xl font-['Acumin']'">
-        Read more <span className='underline underline-offset-[6px] cursor-pointer'>about Consulteer</span>
+        Read more <Link to='/about-us'><span className='underline underline-offset-[6px] cursor-pointer'>about Consulteer</span></Link>
       </h4>
 
       {column('Work', true)}
