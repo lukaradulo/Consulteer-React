@@ -6,7 +6,7 @@ import Home from './pages/Home';
 const App: React.FC = () => {
   return (
     <div>
-      <div className='ml-16 mr-16'>
+      <div className='mx-14'>
         <Navbar />
         <Home />
       </div>
