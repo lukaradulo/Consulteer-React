@@ -1,0 +1,15 @@
+
+$bg-color: #fdfdfd;
+$color-consulteer: #3cd52e;
+
+@mixin flex($direction: row, $justify: center, $items: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $items;
+}
+
+@mixin font($family: 'Acumin', $size) {
+  font-family: $family;
+  font-size: $size;
+}

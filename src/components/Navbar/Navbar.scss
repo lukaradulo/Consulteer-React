@@ -1,0 +1,154 @@
+// fixed top-0 inset-x-0 bg-[#fdfdfd] flex flex-row items-center justify-between
+@import './../../content/globals/global-css.scss';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: $bg-color;
+  @include flex($justify: space-between);
+  
+  .left-side {
+    img {
+      height: 92px;
+    }
+  }
+
+  .right-side {
+    display: none;
+  }
+
+  .right-side-opened {
+    padding: 2vh 4vmin 0!important;
+    background-color: #0a0a33;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    @include flex($direction: column, $justify: flex-start, $items: flex-start);
+
+    ul {
+      margin: 64px 0 0 30px;
+      letter-spacing: 1px;
+      line-height: 1.1em;
+    }
+
+    li {
+      color: white;
+      @include font($family: 'Acumin-Light', $size: 17px);
+      @include flex($direction: column, $items: flex-start);
+      padding: 14px 0;
+    }
+
+    .last-li {
+      display: none;
+    }
+
+    .nav-socials {
+      margin: 22px 0 60px 26px;
+    }
+
+    h2 {
+      margin-left: 30px;
+      margin-bottom: 30px;
+      color: white;
+      @include font($family: 'GTSuperText-Black', $size: 26px)
+    }
+
+    button {
+      margin: 0 0 42px 36px;
+      @include font($family: 'Acumin-Bold', $size: 18PX);
+      letter-spacing: 1.5px;
+      padding: 15px 25px 10px 30px;
+      background-color: white;
+      border: #3cd52e solid 3px;
+      box-shadow: -1px 0 0 #3cd52e, 0 1px 0 #3cd52e, -2px 1px 0 #3cd52e, -1px 2px 0 #3cd52e, -3px 2px 0 #3cd52e, -2px 3px 0 #3cd52e, -4px 3px 0 #3cd52e, -3px 4px 0 #3cd52e, -5px 4px 0 #3cd52e, -4px 5px 0 #3cd52e, -6px 5px 0 #3cd52e, -5px 6px 0 #3cd52e, -7px 6px 0 #3cd52e, -6px 7px 0 #3cd52e, -8px 7px 0 #3cd52e, -7px 8px 0 #3cd52e, -9px 8px 0 #3cd52e;
+    }
+
+    .nav-footer {
+      @include flex();
+      @include font($family: 'Acumin-Light', $size: 16px);
+      margin-left: 30px;
+      color: white;
+    }
+  }
+
+  .burger {
+    margin-right: 12px;
+    z-index: 1000;
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  
+    background-color: $bg-color;
+    @include flex($justify: space-between);
+  
+    .left-side {
+      @include flex();
+  
+      img {
+        height: 92px;
+        margin-left: 48px;
+        cursor: pointer;
+      }
+    }
+  
+    .right-side {
+      @include flex();
+
+      ul {
+        @include flex();
+        margin-top: 8px;
+        @include font($size: 17px);
+        letter-spacing: 0.1em;
+      }
+
+      .first-li {
+        display: none;
+      }
+  
+      li {
+        margin-right: 40px;
+        cursor: pointer;
+      }
+  
+      .last-li {
+        color: $color-consulteer;
+        @include font('Acumin-Bold', 17px);
+        margin-right: 64px;
+      }
+
+      .nav-socials {
+        display: none;
+      }
+
+      .nav-footer {
+        display: none;
+      }
+
+      h2 {
+        display: none;
+      }
+
+      button {
+        display: none;
+      }
+    }
+
+    .burger {
+      display: none;
+    }
+  }
+}

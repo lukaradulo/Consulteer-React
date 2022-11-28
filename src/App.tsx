@@ -1,8 +1,8 @@
 import React from 'react';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import About from './pages/About';
-import Home from './pages/Home';
+// import Footer from './components/Footer';
+import Navbar from './components/Navbar/Navbar';
+// import About from './pages/About';
+// import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -10,13 +10,13 @@ const App: React.FC = () => {
     <Router>
       <div className='mx-14'>
         <Navbar />
-        <Routes>
+        {/* <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about-us' element={<About />} />
-        </Routes>
+        </Routes> */}
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
