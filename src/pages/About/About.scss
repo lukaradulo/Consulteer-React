@@ -1,0 +1,134 @@
+@import './../../content/globals/global-css.scss';
+
+@media only screen and (min-width: 426px) {
+  .about {
+    @include font($size: 17px);
+    margin-top: 150px;
+
+    .top {
+      h1 {
+        @include font($family: 'GTSuperText-Black', $size: 64px);
+
+        span {
+          color: $color-consulteer;
+        }
+      }
+
+      p {
+        font-size: 24px;
+        color: #2c2c2c;
+        margin-top: 30px;
+        line-height: 1.33em;
+      }
+    }
+
+    h2 {
+      @include font($family: 'GTSuperText-Black', $size: 30px);
+      line-height: 1.25rem;
+    }
+
+    p {
+      font-family: 'Acumin';
+      margin-top: 40px;
+      line-height: 1.41em;
+      color: #2c2c2c;
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+      max-width: 66%;
+    }
+
+    .description-second {
+      margin: 6rem 0;
+      display: flex;
+      flex-direction: column;
+      max-width: 66%;
+    }
+
+    h3 {
+      @include font($family: 'GTSuperText-Black', $size: 36px);
+      margin-bottom: 1.5rem;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      @include font($family: 'Acumin-Bold', $size: 24px);
+
+      .person {
+        @include flex($justify: flex-start, $items: flex-end);
+      }
+
+      p {
+        @include font($family: 'Acumin-Light', $size: 17px);
+        color: #454545;
+        margin-top: 0.75rem;
+      }
+    }
+
+    .directors-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .executives-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      margin-bottom: 8rem;
+    }
+
+    .values {
+      display: grid;
+      gap: 1.5rem;
+      margin-bottom: 9rem;
+
+      .values-columns {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4rem;
+  
+        img {
+          height: 330px;
+          width: 100%;
+          object-fit: cover;
+        }
+  
+        .content {
+          display: flex;
+          flex-direction: column;
+        }
+  
+        .content-large {
+          grid-column: span 2 / span 2;
+        }
+  
+        .title {
+          @include font($size: 17px);
+          margin-top: 0.75rem;
+        }
+      }
+    }
+
+    h1 {
+      @include font($family: 'GTSuperText-Black', $size: 48px);
+
+      span {
+        color: $color-consulteer;
+      }
+    }
+
+    .conduct-code {
+      @include flex($justify: flex-start, $items: flex-start);
+
+      h3 {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}

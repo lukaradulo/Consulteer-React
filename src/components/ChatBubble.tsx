@@ -7,11 +7,11 @@ const ChatBubble: React.FC = () => {
       <div className="rotate-[-47deg] relative top-[22px] -left-[14px] w-[27px] h-[42px] border-b-8 border-[#5cdc3c] bg-white"></div>
       <div className="border-8 border-[#5cdc3c] border-solid py-12 pl-[60px] pr-16">
         <div>
-          <h2 className="font-['GTSuperText-Black'] text-[36px] leading-5">All for One.</h2>
-          <p className="mt-8 max-w-full leading-[1.6em]">All members of our group support each other, and the members pledge to support our group. An ecosystem where transparency, fairness and consistency are crucial to our success. Our rule is simple. We believe in the culture of us.</p>
+          <div className="font-['GTSuperText-Black'] text-[36px] leading-5">All for One.</div>
+          <div className="mt-8 max-w-full leading-[1.6em]">All members of our group support each other, and the members pledge to support our group. An ecosystem where transparency, fairness and consistency are crucial to our success. Our rule is simple. We believe in the culture of us.</div>
         </div>
         <div className="flex flex-row justify-between items-end mt-16">
-          <p>1/3</p>
+          <div>1/3</div>
           <div>
             <ArrowForwardIcon sx={{ fontSize: '24px', transform: 'rotate(180deg)' }}/>
             <ArrowForwardIcon sx={{ color: '#5cdc3c', fontSize: '24px', marginLeft: '40px' }}/>
