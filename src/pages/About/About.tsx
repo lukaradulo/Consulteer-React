@@ -1,7 +1,7 @@
 import { LinkedIn } from "@mui/icons-material";
 import React from "react";
 import './About.scss';
-import ChatBubble from "../../components/ChatBubble";
+import ChatBubble from "../../components/ChatBubble/ChatBubble";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const About: React.FC = () => {
