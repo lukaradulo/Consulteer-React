@@ -1,0 +1,181 @@
+@import './../../content/globals/global-css.scss';
+
+footer {
+  margin-top: 120px;
+  background-color: #0a0a33;
+  border: 20px solid $color-consulteer;
+  padding: 2vmin 4vmin;
+
+  .top-part {
+    @include flex($direction: column, $justify: space-between, $items: flex-start);
+    @include font($size: 16px);
+    color: white;
+
+    .links {
+      @include flex($justify: space-between, $items: flex-start);
+      width: 100%;
+
+      ul {
+        margin-bottom: 32px;
+
+        .ul-nav {
+          margin-top: 24px;
+          width: 70%;
+        }
+
+        .ul-cities {
+          @extend .ul-nav;
+        }
+      }
+    }
+
+    .socials {
+      margin: 16px 0;
+    }
+  }
+
+  h2 {
+    width: 70%;
+    @include font($family: 'GTSuperText-Black', $size: 28px);
+    line-height: 1.375;
+    color: white;
+    margin: 40px 0;
+  }
+
+  .bottom-part {
+    margin-bottom: 8vmin;
+
+    button {
+      margin: 0 0 16px 16px;
+      width: fit-content;
+      @include font($family: 'Acumin-Bold', $size: 18px);
+      letter-spacing: 0.05em;
+      box-shadow: -1px 0 0 #3cd52e, 0 1px 0 #3cd52e, -2px 1px 0 #3cd52e, -1px 2px 0 #3cd52e, -3px 2px 0 #3cd52e, -2px 3px 0 #3cd52e, -4px 3px 0 #3cd52e, -3px 4px 0 #3cd52e, -5px 4px 0 #3cd52e, -4px 5px 0 #3cd52e, -6px 5px 0 #3cd52e, -5px 6px 0 #3cd52e, -7px 6px 0 #3cd52e, -6px 7px 0 #3cd52e, -8px 7px 0 #3cd52e, -7px 8px 0 #3cd52e, -9px 8px 0 #3cd52e;
+      border: 3px solid $color-consulteer;
+      background-color: #fdfdfd;
+      padding: 12px 24px 10px 28px;
+    }
+
+    ul {
+      margin: 48px 0 0 14px;
+      font-family: 'Acumin-Light';
+      color: white;
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      li {
+        margin-right: 32px;
+        cursor: pointer;
+      }
+
+      img {
+        padding: 0 32px;
+      }
+
+      .scroll-up {
+        font-family: 'Acumin-Bold';
+        color: $color-consulteer;
+        cursor: pointer;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  footer {
+    margin-top: 120px;
+    background-color: #0a0a33;
+    border: 20px solid $color-consulteer;
+    padding: 2vmin 6vmin;
+
+    .top-part {
+      @include flex($justify: space-between, $items: flex-start);
+      @include font($size: 16px);
+      color: white;
+
+      .links {
+        @include flex($justify: space-between, $items: flex-start);
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          margin-right: 202px;
+  
+          .ul-nav {
+            width: 100%;
+            margin-top: 24px;
+          }
+  
+          .ul-cities {
+            @extend .ul-nav;
+            flex: 0 0 26%;
+          }
+        }
+      }
+
+      .socials {
+        @include flex();
+        margin-top: 24px;
+      }
+    }
+
+    h2 {
+      width: fit-content;
+      @include font($family: 'GTSuperText-Black', $size: 36px);
+      line-height: 1.375;
+      color: white;
+      margin-top: 32px;
+      margin-bottom: 18px;
+    }
+
+    .bottom-part {
+      @include flex($justify: space-between);
+      width: 100%;
+      margin-bottom: 2vmin;
+
+      button {
+        margin: 0 0 16px 16px;
+        width: fit-content;
+        @include font($family: 'Acumin-Bold', $size: 18px);
+        letter-spacing: 0.05em;
+        box-shadow: -1px 0 0 #3cd52e, 0 1px 0 #3cd52e, -2px 1px 0 #3cd52e, -1px 2px 0 #3cd52e, -3px 2px 0 #3cd52e, -2px 3px 0 #3cd52e, -4px 3px 0 #3cd52e, -3px 4px 0 #3cd52e, -5px 4px 0 #3cd52e, -4px 5px 0 #3cd52e, -6px 5px 0 #3cd52e, -5px 6px 0 #3cd52e, -7px 6px 0 #3cd52e, -6px 7px 0 #3cd52e, -8px 7px 0 #3cd52e, -7px 8px 0 #3cd52e, -9px 8px 0 #3cd52e;
+        border: 3px solid $color-consulteer;
+        background-color: #fdfdfd;
+        padding: 12px 24px 10px 28px;
+      }
+
+      ul {
+        @include flex($justify: flex-end);
+        margin-top: 48px;
+        font-family: 'Acumin-Light';
+        color: white;
+
+        .links {
+          display: flex;
+          flex-direction: row;
+        }
+
+        li {
+          margin-right: 32px;
+          cursor: pointer;
+        }
+
+        img {
+          padding: 0 32px;
+        }
+
+        .scroll-up {
+          font-family: 'Acumin-Bold';
+          color: $color-consulteer;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
