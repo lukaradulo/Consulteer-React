@@ -7,6 +7,11 @@ import { useTranslation } from "react-i18next";
 const Footer: React.FC = () => {
   const { t } = useTranslation();
 
+  const toTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   const footerNav: string[] = [
     t('HOME'), 
     t('EXPERTISE'), 
@@ -70,7 +75,7 @@ const Footer: React.FC = () => {
             <p>Copyright 2022 Consulteer</p>
             <img src="heart.svg" alt=""/>
           </div>
-          <div className="scroll-up">BACK TO TOP</div>
+          <div className="scroll-up" onClick={toTop}>BACK TO TOP</div>
         </ul>
       </div>
     </footer>

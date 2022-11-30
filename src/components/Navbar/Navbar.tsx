@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [navOpen, setNavOpen] = useState(true);
@@ -28,7 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <header className="navbar">
       <div className="left-side">
-        <img src="nav-logo.png" alt=""/>
+        <Link to='/'><img src="nav-logo.png" alt=""/></Link>
       </div>
 
       <div id="nav-items" className="right-side">
