@@ -4,11 +4,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { useTranslation } from "react-i18next";
 
 const Navbar: React.FC = () => {
   const [navOpen, setNavOpen] = useState(true);
-  // const navItems: HTMLElement = document.getElementById("nav-items")!; 
   const [navItems, setNavItems] = useState<HTMLElement>(document.getElementById("nav-items")!);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setNavItems(document.getElementById("nav-items")!);
@@ -32,11 +33,11 @@ const Navbar: React.FC = () => {
 
       <div id="nav-items" className="right-side">
         <ul> 
-          <li className="first-li">HOME</li>
-          <li>EXPERTISE</li>
-          <li>INDUSTRIES</li>
-          <li>CAREER</li>
-          <li className="last-li">CONTACT</li>
+          <li className="first-li">{t("HOME")}</li>
+          <li>{t("EXPERTISE")}</li>
+          <li>{t("INDUSTRIES")}</li>
+          <li>{t("CAREER")}</li>
+          <li className="last-li">{t("CONTACT")}</li>
         </ul>
 
         <div className="nav-socials">
@@ -44,8 +45,8 @@ const Navbar: React.FC = () => {
           <LinkedInIcon sx={{ fontSize: 50, color: 'white' }}/>
         </div>
       
-        <h2>The Future is bright.<br/>Stay relevant.</h2>
-        <button>CONTACT</button>
+        <h2>{t("The Future is bright.")}<br/>{t("Stay relevant.")}</h2>
+        <button>{t("CONTACT")}</button>
         
         <div className="nav-footer"> 
           <p>Copyright 2022 Consulteer</p>

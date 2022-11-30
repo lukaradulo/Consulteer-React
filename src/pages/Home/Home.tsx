@@ -1,8 +1,11 @@
 import React from "react";
 import './Home.scss';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
+
   const workColumn = (leftTitle: string, rightTitle: string, unevenColumn: boolean): JSX.Element => {
     return (
       <div className="work-column">
@@ -40,7 +43,7 @@ const Home: React.FC = () => {
   const column =(title: string, isWorkColumn: boolean): JSX.Element => {
     return(
       <div className="columns">
-      <h2>{title}</h2>
+      <h2>{t(title)}</h2>
         {
         isWorkColumn
           ? <div className="grid">
@@ -56,7 +59,7 @@ const Home: React.FC = () => {
 
         <div className="show-more">
           <img src="https://www.consulteer.com/assets/images/plus-starhunter.svg" alt=""/>
-          <p>{`SHOW MORE ${title.toUpperCase()}`}</p>
+          <p>{`${t('SHOW MORE')} ${t(title).toUpperCase()}`}</p>
         </div>
       </div>
     );
@@ -64,10 +67,10 @@ const Home: React.FC = () => {
 
   return (
     <div className='home'>
-      <h1>Human. Technology. <span>Together.</span></h1>
-      <h4>We deliver full service, end-to-end advisory & engineering services for tomorrow - always with the human at heart. Technology by humans, for humans.</h4>
+      <h1>{t("Human. Technology.")} <span>{t("Together.")}</span></h1>
+      <h4>{t("We deliver full service...")}</h4>
       <h4>
-        Read more <Link to='/about-us'><span>about Consulteer</span></Link>
+        {t("Read more")} <Link to='/about-us'><span>{t("about Consulteer")}</span></Link>
       </h4>
 
       {column('Work', true)}

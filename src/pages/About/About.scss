@@ -9,7 +9,7 @@
   .top {
     h1 {
       margin-bottom: 26px;
-      @include font($family: 'GTSuperText-Black', $size: 44px);
+      @include font($family: 'GTSuperText-Black', $size: 38px);
       line-height: 1.2em;
 
       span {
@@ -243,10 +243,11 @@
     }
 
     .conduct-code {
-      @include flex($justify: flex-start, $items: flex-start);
+      @include flex($justify: flex-start, $items: center);
 
       h3 {
         margin-right: 0.75rem;
+        margin-bottom: 1.2em;
       }
     }
   }

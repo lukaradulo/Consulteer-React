@@ -2,31 +2,34 @@ import React from "react";
 import './Footer.scss';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
-const footerNav: string[] = [
-  'HOME', 
-  'EXPERTISE', 
-  'ABOUT CONSULTEER', 
-  'WORK',
-  'INDUSTRIES',
-  'CODE OF CONDUCT',
-  'STORIES',
-  'CAREER'
-];
-
-const footerCities: string[] = [
-  'LUCERNE',
-  'BELGRADE',
-  'RHINE VALLEY',
-  'ZURICH',
-  'ZRENJANIN',
-  'PORTO',
-  'MUNICH',
-  'NOVI SAD',
-  'LJUBLJANA'
-];
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
+  const footerNav: string[] = [
+    t('HOME'), 
+    t('EXPERTISE'), 
+    t('ABOUT CONSULTEER'), 
+    t('WORK'),
+    t('INDUSTRIES'),
+    t('CODE OF CONDUCT'),
+    t('STORIES'),
+    t('CAREER')
+  ];
+
+  const footerCities: string[] = [
+    'LUCERNE',
+    'BELGRADE',
+    'RHINE VALLEY',
+    'ZURICH',
+    'ZRENJANIN',
+    'PORTO',
+    'MUNICH',
+    'NOVI SAD',
+    'LJUBLJANA'
+  ];
+
   return (
     <footer>
       <div className="top-part">
@@ -51,12 +54,12 @@ const Footer: React.FC = () => {
       </div>
 
       <h2>
-        The Future is bright.<br/>
-        Stay relevant.
+        {t("The Future is bright.")}<br/>
+        {t("Stay relevant.")}
       </h2>
 
       <div className="bottom-part">
-        <button>CONTACT</button>
+        <button>{t("CONTACT")}</button>
 
         <ul>
           <div className="links">

@@ -21,6 +21,11 @@
     color: #2c2c2c;
     @include font($size: 24px);
 
+    a {
+      text-decoration: none;
+      color:#2c2c2c
+    }
+
     span {
       text-decoration-line: underline;
       text-underline-offset: 6px;
@@ -81,6 +86,7 @@
     .show-more {
       display: flex;
       flex-direction: row;
+      align-items: center;
       margin-top: 3rem;
       cursor: pointer;
 
@@ -93,6 +99,7 @@
         @include font($family: 'Acumin-Bold', $size: 17px);
         letter-spacing: 0.05em;
         padding-left: 0.375rem;
+        padding-top: 0.3em;
       }
     }
   }

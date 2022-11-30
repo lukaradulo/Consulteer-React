@@ -1,15 +1,17 @@
 import React from "react";
 import './ChatBubble.scss';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useTranslation } from "react-i18next";
 
 const ChatBubble: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="chat-bubble">
       <div className="top-corner"></div>
       <div className="bubble">
         <div>
-          <h1>All for One.</h1>
-          <p>All members of our group support each other, and the members pledge to support our group. An ecosystem where transparency, fairness and consistency are crucial to our success. Our rule is simple. We believe in the culture of us.</p>
+          <h1>{t("All for One.")}</h1>
+          <p>{t("All members of our...")}</p>
         </div>
         <div className="pages-number">
           <div>1/3</div>
