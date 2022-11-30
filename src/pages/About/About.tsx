@@ -10,8 +10,8 @@ const About: React.FC = () => {
     return (
       <div className="column">
         <div className="person">
-          <LinkedIn sx={{ marginRight: '4px', fontSize: 40 }}/>
-          <div>{name}</div>
+          <LinkedIn sx={{ marginRight: '4px', fontSize: 30 }}/>
+          <div className="name">{name}</div>
         </div>
         <p>{position}</p>
       </div>
@@ -83,7 +83,7 @@ const About: React.FC = () => {
       <h1>Human. Technology. <span>Together.</span></h1>
       <div className="conduct-code">
         <h3>NEXT - CODE OF CONDUCT</h3>
-        <ArrowForwardIcon sx={{ marginTop: 1.4, fontSize: 30 }}/>
+        <ArrowForwardIcon sx={{ marginBottom: 0.4, fontSize: 24 }}/>
       </div>
     </div>
   );

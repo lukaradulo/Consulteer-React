@@ -14,8 +14,8 @@ const ChatBubble: React.FC = () => {
         <div className="pages-number">
           <div>1/3</div>
           <div>
-            <ArrowForwardIcon sx={{ fontSize: '24px', transform: 'rotate(180deg)' }}/>
-            <ArrowForwardIcon sx={{ color: '#5cdc3c', fontSize: '24px', marginLeft: '40px' }}/>
+            <ArrowForwardIcon sx={{ fontSize: '22px', transform: 'rotate(180deg)' }}/>
+            <ArrowForwardIcon sx={{ color: '#5cdc3c', fontSize: '22px', marginLeft: '40px' }}/>
           </div>
         </div>
       </div>

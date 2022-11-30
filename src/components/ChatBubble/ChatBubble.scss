@@ -1,8 +1,88 @@
 @import './../../content/globals/global-css.scss';
 
+.chat-bubble {
+  margin-top: 16px;
+
+  .top-corner {
+    background-color: white;
+    border-bottom-width: 8px;
+    border-color: $color-consulteer;
+
+    height: 42px;
+    width: 27px;
+    position: relative;
+    top: 22px;
+    left: -14px;
+    transform: rotate(-47deg);
+  }
+
+  .bubble {
+    border: 8px solid $color-consulteer;
+    padding: 42px 30px 35px 32px;
+
+    h1 {
+      @include font($family: 'GTSuperText-Black', $size: 28px);
+      letter-spacing: 0.03em;
+      line-height: 1rem;
+    }
+
+    p {
+      color: rgb(63, 63, 63);
+      margin-top: 1.6rem;
+      max-width: 100%;
+      line-height: 1.6em;
+    }
+
+    .pages-number {
+      @include flex($justify: space-between, $items: flex-end);
+      margin-top: 8rem;
+    }
+  }
+
+  .bottom-triangle::before {
+    border-style: solid;
+    border-width: 20px;
+    content: ' ';
+    
+    border-top-color: $color-consulteer;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: $color-consulteer;
+
+    height: 0;
+    width: 0;
+
+    position: absolute;
+    right: auto;
+    top: auto;
+    bottom: -585px;
+    left: 16px;
+  }
+
+  .bottom-triangle::after {
+    border-style: solid;
+    border-width: 12px;
+    content: ' ';
+
+    border-top-color: white;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: white;
+
+    height: 0;
+    width: 0;
+
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: -568px;
+    left: 24px;
+  }
+}
+
 @media only screen and (min-width: 426px) {
   .chat-bubble {
-    max-width: 66%;
+    max-width: 100%;
 
     .top-corner {
       background-color: white;
@@ -54,8 +134,8 @@
       position: absolute;
       right: auto;
       top: auto;
-      bottom: -262px;
-      left: 64px;
+      bottom: -232px;
+      left: 60px;
     }
 
     .bottom-triangle::after {
@@ -74,8 +154,8 @@
       position: absolute;
       top: auto;
       right: auto;
-      bottom: -244px;
-      left: 72px;
+      bottom: -215px;
+      left: 68px;
     }
   }
 }

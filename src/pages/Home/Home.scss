@@ -101,7 +101,7 @@
 @media only screen and (min-width: 426px) {
   .home {
     letter-spacing: 0.025em;
-    margin: 0 4rem;
+    margin: 0 2rem;
 
     h1 {
       margin-top: 160px;
@@ -128,13 +128,13 @@
       h2 {
         @include font($family: 'GTSuperText-Black', $size: 36px);
         line-height: 1.25rem;
-        margin: 100px 0 40px 0;
+        margin: 100px 0 4px 0;
       }
 
       .grid {
         display: grid;
         gap: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
 
         .work-column {
           display: grid;
@@ -199,7 +199,7 @@
       .show-more {
         display: flex;
         flex-direction: row;
-        margin-top: 3rem;
+        margin-top: 1rem;
         cursor: pointer;
 
         img {
